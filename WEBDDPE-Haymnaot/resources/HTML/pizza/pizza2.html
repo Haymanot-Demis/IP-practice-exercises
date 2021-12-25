@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Pizza Order and delivery
+        </title>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+<bod>
+    <table bgcolor="orange" width=100%>
+        <tr>
+        <td width=10%></td>
+        <td width=30% >
+            <img src="image/icons8-pizza-48.png" alt="pizza" width="70" height="70">
+        </td>
+        <td width=50%>
+            <h1> Pizza Delivery online </h1>
+        </td>
+        <td width=10%></td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+</table>
+<hr size="3px" color="black">
+<table width=100%>
+    <tr>
+    <td width=10%></td>
+    <td width=60%><h1>Reservation Request</h1></td>
+    <td width=30%></td>
+    </tr>
+    <td></td>
+    <td width=60%>
+        <fieldset>
+            <legend><font color=blue>  General information</font></legend>
+             <label for="date">Arrival date</label>
+             <input type="number" name="date" required>
+             <br><br>
+             <label for="Night">Night</label>
+             <input type="number" name="Night" required>
+             <br><br>
+             <label for="adult">Adult</label>
+             <select name="adult" id="adult">
+                 <option value="one">1</option>
+                 <option value="two">2</option>
+                 <option value="three">3</option>
+                 <option value="fout">4</option>
+                 <option value="five">5</option>
+             </select>
+             <br><br>
+             <label for="adult">children</label>
+             <select name="adult" id="adult">
+                <option value="0">0</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="fout">4</option>
+                <option value="five">5</option>
+            </select>
+        </fieldset>
+    </td>
+    <td></td>
+    <tr>
+        <td></td>
+        <td>
+            <form action="#">
+            <fieldset>
+                <legend><font color=blue>  Preferences</font></legend>
+                 <label for="room">Room type</label>                 
+                 <input type="radio" name="room">
+                 <label for="room">Standard</label>
+                 <input type="radio" name="room" >
+                 <label for="room">Business</label>
+                 <input type="radio" name="room" >
+                 <label for="room">Suit</label>
+                 <br><br>
+                 <label for="Bed">Bed type</label>                 
+                 <input type="radio" name="Bed" >
+                 <label for="Bed">King</label>
+                 <input type="radio" name="Bed" >
+                 <label for="Bed">Double Double</label>
+                 <br><br>
+                 <input type="checkbox" name="smoke" >
+                 <label for="smoke">Smoking</label>
+            </fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <fieldset>
+                <legend><font color=blue> Contact information</font></legend>
+                 <label for="name">Name </label>
+                 <input type="text" name="name" required>
+                 <br><br>
+                 <label for="Email">Email</label>
+                 <input type="email" name="Email" placeholder="jk23@gamil.com" required>
+                 <br><br>
+                 <label for="Phone">Phone</label>
+                <input type="tel" name="Phone" id="tel" placeholder="+252-942-563-730" pattern="">
+                 <br>
+            </fieldset>
+            <br>
+            <button name="submit" > Submit Reservation</button>&nbsp;&nbsp;&nbsp;
+            <button name="submit"> clear</button>
+        </form>
+        </td>
+    </tr>
+</table>
