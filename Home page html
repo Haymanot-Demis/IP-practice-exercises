@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+	<meta name = "keywords" content = "tou,travel,Amazing Places,Ethiopia,Lalibela,Visit Ethiopia">
+	<meta name = "description" content = "A tour and travel home page">
+	<meta name = "author" content = "4HF_tour_and_travel">
+	<title>4HF homepage</title>
+    <link rel = "stylesheet" href = "HomepageCss.css">
+	<link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+	<style>
+		
+		div.gallery-container{
+			width:100%;
+			padding:5px;
+			margin-left: 5px;
+			display: flex;
+			gap: 5px;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			flex-direction: row;
+		}                               
+
+		div.image-container{
+			width:300px;
+			padding:0px;
+			padding-bottom: 10px;
+			height:250px;
+			float: left;
+			position: relative;
+		}
+
+		.image-container img{
+			max-width:100%;
+			height:100%;
+		}
+
+		.description-container{
+			box-sizing: border-box;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 0;
+			width:100%;
+			padding: 3px;
+			z-index: 1;
+			color: rgb(14, 168, 47);
+			font-weight: bold;
+			visibility: hidden;
+			transition: 0.6s;
+		}
+
+		.desc{
+			padding: 5px;
+		}
+		
+		.desc a{
+			font-size: 20px;
+		}
+
+		.image-container:hover .description-container{
+			height: 100%;
+			visibility: visible;
+			background-color: rgba(0,0,0,0.5);
+		}
+
+		.image-container:hover img{
+			opacity: 1;
+		}
+
+		div.experience-gallery{
+			clear: both;
+			width: 95%;
+			margin-left: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-right: 0px;
+		}
+     
+    .vid-container{
+		width:48%;
+		padding: 10px;
+	}
+
+	.vid-container video{
+		height: 350px;
+	}
+	 
+
+	@media only screen and (max-width:1220px) {
+		.col-1{width:8.33%;height:auto;}
+		.col-2{width: 16.66%;height:auto;}
+		.col-3{width: 25%;height:auto;}
+		.col-4{width: 33.33%;height:auto;}
+		.col-5{width: 41.66%;height:auto;}
+		.col-6{width: 50%;height:auto;}
+		.col-7{width: 58.33%;height:auto;}
+		.col-8{width: 66.66%;height:auto;}
+		.col-9{width: 75%;height:auto;}
+		.col-10{width: 83.33%;height:auto;}
+		.col-11{width: 91.66%;height: auto;}
+		.col-12{width: 100%;height: auto;}	
+	}
+
+
+	@media only screen and (max-width:980px){
+		.image-container{
+			width: 48%;
+			margin: 0px;
+		}
+	}
+
+	@media only screen and (max-width:500px) {
+		.col-m1{width:8.33%;height:auto;}
+		.col-m2{width: 16.66%;height:auto;}
+		.col-m3{width: 25%;height:auto;}
+		.col-m4{width: 33.33%;height:auto;}
+		.col-m5{width: 41.66%;height:auto;}
+		.col-m6{width: 50%;height:auto;}
+		.col-m7{width: 58.33%;height:auto;}
+		.col-m8{width: 66.66%;height:auto;}
+		.col-m9{width: 75%;height:auto;}
+		.col-m10{width: 83.33%;height:auto;}
+		.col-m11{width: 91.66%;height: auto;}
+		.col-m12{width: 100%;height: auto;}	
+	}
+
+	@media only screen and (max-width:650px){
+		.vid-container video{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+
+	</style>
+</head>
+<body>
+  <header>
+    <div>
+	    <a href = "#" class = "logo" ><img src="Logo3.jpg" alt="LOGO" width = "100px" height="60px"></a>
+		<div  class = "search-bar-container">
+			<input class = "searchBar" type = "Search" name = "searchBar" value = "" placeholder = "Where to go... " list = "ethiopia">
+			<a href = "#" class = "search-icon">
+				<i class="fa fa-2x fa-search" aria-hidden="true"></i>
+			</a>
+		</div>
+
+		<div class = "login-container">
+			<button class = "blogs" ><a href = "Tips.html" >Travel Blogs</a></button>
+			<button class = "login" style = "width:100px;"><a href = "tour guide/Profiles/log in.html">Log In</a></button>    
+		</div>
+		
+		<div class = "navigation"> 
+			<nav class = "nav">
+				<input type = "checkbox" id = "check" name = "checkBox">
+				<label for = "check" class = "checkbtn"><i class="fas fa-2x fa-bars"></i></label>
+			    <ul class = "nav-list">
+				 <li class = "destination dropdown"> <a href = "destinations/destinations.html">Destinations</a>
+				 <div class = "destination-lists places">
+					 <ul >
+						 <li><a href = "">Addis Ababa</a></li>
+						 <li><a href = "">Bahdar</a></li>
+						 <li><a href = "">Harar</a></li>
+						 <li><a href = "">Gonder</a></li>
+						 <li><a href = "">Afar</a></li>
+						 <li><a href = "">Jinka</a></li>
+					 </ul>						
+				 </div>
+				</li>
+				 <li class = "destination hotel"><a class = "hotelRe" href = "hotel reservation/hotel reservation.html" >Hotel Reservation</a>
+					<div class = "destination-lists hotels">
+						<ul >
+							<li><a href = "">Sharaton</a></li>
+							<li><a href = "">Skilight</a></li>
+							<li><a href = "">Golden Tulip</a></li>
+							<li><a href = "">Haile resort</a></li>
+							<li><a href = "">Kuriftu</a></li>
+							<li><a href = "">Emerald</a></li>
+						</ul>						
+					</div>
+				 </li>
+				 <li class = "destination transportation"><a class = "transport" href = "transportation/transport.html" >Transportaion</a>
+					<div class = "destination-lists transport">
+						<ul >
+							<li><a href = "">For family</a></li>
+							<li><a href = "">For Alone</a></li>
+							<li><a href = "">For Group</a></li>
+						</ul>						
+					</div>
+				</li>
+				 <li><a class = "guides" href = "tour guide/tour guide.html" >Tour guides</a></li>
+				 <li><a class = "about-us" href = "About us/About us.html" >About us</a></li>
+				 <li><a class = "Experience" href = "Experience.html" >Experiences</a></li>
+			  </ul>
+			</nav>
+		</div>
+    </div>
+   </header>
+ 
+   <main>
+    <div class  = "Background-video-container">
+		<video width = "100%"; height = "min(900px,30%)" autoplay muted loop>
+
+		   <source src = "yt5s.com-A Tour of Ethiopia's Amazing Landscapes.mp4" type = "video/mp4" >Your browser doesn't support the video
+		</video>
+    </div>
+      <h1 style = "margin-left: 100px;">Recomendation</h1>
+
+	<div class = "gallery-container">
+
+		<div class="image-container col-m6">
+			<img src = "image/awash.jpg" alt = "Awash park">
+			<div class = "description-container">
+			    <div class="desc">
+					The park covers an area of 756 square kilometres, comprised mainly of acacia and grassland, 
+					but...<a href = "#Awash">Read more</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="image-container col-m6">
+			<img src = "image/axum.jpg" alt = "flowers">
+			<div class = "description-container">
+			  <div class="desc">
+				Axum was the hub of the marine trading power known as the Aksumite Empire, which predated the earliest mentions in Roman-era writings. 
+				Around 356 CE...<a href = "#axum">Read more</a>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="image-container col-m6" >
+			<img src = "image/Chilada.jpg" alt = "flowers">
+			<div class="description-container">
+			   <div class="desc">
+				Geladas are unique in the monkey world which are found in the . Their diet is almost entirely grass, but 
+				they have impressive canine teeth... <a href = "#chilada">Read more</a>
+			   </div>
+			</div>
+		</div>
+		
+		<div class="image-container col-m6">
+			<img src = "image/ert ale.jpg" alt = "flowers">
+		   <div class="description-container">
+			    <div class="desc">
+					Erta Ale (or Ertale or Irta'ale; Amharic: ኤርታሌ) is a continuously active
+					basaltic shield volcano in the Afar Region of northeastern Ethiopia... <a href = "#ert-ale">Read more</a>
+				</div>
+		   </div>
+		</div>
+			
+		<div class="image-container col-m6">
+			<img src = "image/fasil ginb.jpg"  alt = "flowers">
+			
+			<div class="description-container">
+			    <div class="desc">
+					The Fasil Ghebbi is a fortress located in Gondar, Amhara Region, Ethiopia. It was founded in the 17th century 
+					by Emperor Fasilides and was the home of Ethiopian emperors...<a href = "#Fasledes">Read more</a>
+				</div>
+			</div>
+		</div>
+	        
+	    <div class="image-container col-m6">
+			<img src = "image/Jegol.jpg"  alt = "flowers">
+
+			<div class="description-container">
+				<div class="desc">
+					The Harar Jugol Wall in Harar Jugol is the historic fortification surrounding the Ethiopian city which 
+				acted as the capital of the Harari Kingdom from 1520 to 1568... <a href = "#Jegol">Read more</a>
+				</div>
+			</div>
+		</div>
+        
+		<div class="image-container col-m6">
+			<img src = "image/tana.jpg"  alt = "flowers">
+			
+			<div class="description-container">
+			   <div class="desc">
+				Lake Tana is the largest lake in Ethiopia and the source of the Blue Nile. Located in Amhara Region 
+				in the north-western Ethiopian Highlands, the lake is approximately 84 kilometres long and ... <a href = "#lake-tana">Read more</a>
+			   </div>
+			</div>
+		</div>
+
+		<div class = "image-container col-m6">
+			<img src = "image/Tisabay.jpg"   alt = "flowers">
+			
+			<div class="description-container">
+				<div class="desc">
+					The Blue Nile river, which emanates from the nearby Lake Tana, 
+					cascades down a 42m-high drop to produce a dazzling spray of mist and rainbows. 
+					In the rainy season...<a href = "#Tis">Read more</a>
+				</div>
+			</div>
+		</div>
+
+		<div class = "image-container col-m6">
+			<img src = "image/timket.jpg"  alt = "flowers">
+			
+			<div class="description-container">
+				<div class="desc">
+					Timket is an Ethiopian Orthodox Tewahedo Church and Eritrean Orthodox Tewahedo Church celebration of Epiphany. It is celebrated on 19 January, 
+				corresponding to the 11th day of Terr in the Ge'ez calendar. Timkat celebrates the baptism of Jesus in the River Jordan ... <a href = "#Jegol">Read more</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="image-container col-m6">
+			<img src = "image/lalibela.jpg" alt = "Lalibela Monolithic Rock Hewn Church">
+			<div class="description-container">
+			   <div class="desc">
+				Lalibela is a town in the Amhara region of northern Ethiopia. It's known for its distinctive rock-cut 
+				churches dating from the 12th and 13th centuries...<a href = "#lalibela">Read more</a>
+			   </div>
+			</div>
+		</div>
+			
+	</div>
+	<br>
+	<h1 style = "margin-left: 100px;clear: both;">Unforgotable Experiences</h1>
+    <div class="experience-gallery">
+			<div class="vid-container col-12">
+				<video controls muted>  
+					<source src = "yt5s.com-A Tour of Ethiopia's Amazing Landscapes.mp4" type = "video/mp4" >Your browser doesn't support the video=
+				</video>
+			</div>
+			
+			<div class="vid-container col-12"> 
+				<video controls muted>  
+					<source src = "Top 5 AMAZING Places to Visit in Ethiopia Africa Travel Guide.mp4" type = "video/mp4" >Your browser doesn't support the video
+				</video>
+			</div>
+	
+			<div class="vid-container col-12"> 
+				<video controls muted>  
+					<source src = "Ethiopia Travel Guide + Vlog Addis Ababa and Awassa.mp4" type = "video/mp4" >Your browser doesn't support the video 
+				</video>
+			</div>
+	
+			<div class="vid-container col-12">
+				<video   controls muted>  
+					<source src = "Ethiopia Travel Guide + Vlog Addis Ababa and Awassa.mp4" type = "video/mp4" >Your browser doesn't support the video 
+				</video>
+			</div>  
+
+     </div>
+	 
+     </main>
+	
+	 <footer>
+		 <div class="address-container">
+			 
+			<div class="contacts" id = "links">
+				<label for="links">Links</label><br><br>
+				<div>
+					<a href="#">About us</a><br><br>
+					<a href="#">Contact us</a>
+				</div>
+			</div>
+			 <label for="terms"></label>
+			 <div class="contacts" id = "terms">
+
+			 </div>
+			 
+			<div class="contacts" id = "tel">
+				<label for="tel">
+					Contacts
+				</label>
+				<p>TEL:+25190949960922</p>
+				<p>G-mail: <a href = "mailto:haymedin21@gmail.com" s tyle = "color:white">haymedin21@gmail.com</a></p>
+			 </div>
+			 
+			 <div class="contacts" id="social">
+				<label for="social">
+					Follow as on
+				</label>
+				<br><br>
+				<a href = "#"> <img src = "instagram.png" width = "30" height = "20">@4HF_tour_and_travel</a><br>
+				<a href = "#"> <img src = "facebook.png" width = "30" height = "20">https://WWW.Facebool.com/4HF Tour and Travel</a><br>
+				<a href = "#"> <img src = "telegram.png" width = "30" height = "20">@4HF_tour_and_travel</a></div>
+		 </div><br><br>
+		 <div class = "copyright" style = "width:100%; text-align: center;">
+			<i>Copyright 2022 by Refsnes Data. All Rights Reserved.</i>
+		 </div>
+	 </footer>
+
+   </body>
+
+</html>
+
+	      
